@@ -1,0 +1,31 @@
+<% include ../partials/header %></div>
+
+      <div class="starter-template">
+        <h1>CAT NEGOCIOS</h1>
+      <table>
+          <tr>
+              
+
+
+        <% categoriesBusiness.forEach( BusinessCategories => { %>
+
+     
+          
+          <td><%= BusinessCategories._id%>=></td>
+          <td><%= BusinessCategories.title%>=></td>
+            <td><%= BusinessCategories.link%>=></td>
+          <td><%= BusinessCategories.negocio%>=></td>
+          <td><%= BusinessCategories.imgurl%></td>
+        </tr>
+
+        
+
+
+        <% } )%>
+      </table>
+      </div>
+
+  
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,21 @@
+<% include ../partials/header %></div>
+
+      <div class="starter-template">
+        <h1>CatMaster</h1>
+      <table>
+        <% categoriesMaster.forEach( Mcategory => { %>
+
+     
+
+        <tr>
+          <td><%= Mcategory.title%></td>
+        </tr>
+
+        <% } )%>
+      </table>
+      </div>
+
+     
+
+
+<% include ../partials/footer %>

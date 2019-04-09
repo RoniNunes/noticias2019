@@ -1,0 +1,20 @@
+<% include ../partials/header %></div>
+      <div class="starter-template">
+        <h1>NEGOCIOS</h1>
+      <table>
+        <% Businesses.forEach( business => { %>
+
+     
+
+        <tr>
+          <td><%= business.title%></td>
+        </tr>
+
+        <% } )%>
+      </table>
+      </div>
+
+     
+
+
+<% include ../partials/footer %>

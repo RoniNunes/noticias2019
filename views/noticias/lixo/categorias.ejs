@@ -1,0 +1,21 @@
+<% include ../partials/header %></div>
+
+      <div class="starter-template">
+        <h1>Categorias</h1>
+      <table>
+        <% categories.forEach( category => { %>
+
+     
+
+        <tr>
+          <td><%= category.title%></td>
+        </tr>
+
+        <% } )%>
+      </table>
+      </div>
+
+     
+
+
+<% include ../partials/footer %>

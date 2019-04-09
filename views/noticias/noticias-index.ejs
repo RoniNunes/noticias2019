@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+</div>
+
+<div class="starter-template">
+  <h1>Aqui Noticias Públicas 25</h1>
+<!--AQUI APARECE TUDO QUE EU DEFINIR EN RUTAS-->
+  <table>
+    <% noticiasPublica.forEach( category => { %>
+    <%category.leght%>
+    <div class="box1" style="background-image: url(../views-noticias-imgs/restaurantes.jpg)">
+      <div class="box2">
+        <a href="/login"><span><%= category.title%></span></a>
+      </div>
+    </div>
+    <br>
+    <% } )%>
+  </table>
+</div>
+
+<% include ../partials/footer %>
+
+<!--div class="box1" style="background-image: url(../views-noticias-imgs/restaurantes.jpg)">
+    <-img src="../imgs/restaurantes.jpgk" class="logo"->
+    <div class="box2">
+      
+      <!-a class="" href="/restaurantes">Python</a->
+      <a href="/login"><span>Restaurantes</span></a>
+      
+    </div>
+  </div-->

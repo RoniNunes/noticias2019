@@ -1,0 +1,94 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+
+body {
+  padding-top: 5rem;
+  font-family: sans-serif;
+  background: #3498db;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+
+/*body{
+  background: #313131;
+  font-family: sans-serif;
+}*/
+.box1{
+  /*background-image: url(../imgs/restaurantes.jpg);*/
+  background-repeat: no-repeat;
+  background-size: 100% 700px;
+  /*background: transparent;*/
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  width: 50%;
+  height: 15%;
+  padding: 0px;
+  border-radius: 25px;
+  overflow: hidden;
+  color: #313131;
+}
+
+.img{
+  max-width: 100%;
+  height: auto;
+}
+.box1 span{
+  font-size: 80px;
+  height: 80px;
+  display: block;
+  line-height:  80px;
+  text-align: center;
+
+}
+
+.box1 h2{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.box2{
+  width:  100%;
+  height: 70px;
+  border-radius: 1px;
+  overflow: hidden;
+  
+  background: rgba(0,0,0,0.4);/*#313131;
+
+  /*bottom: 0; left: 20px; right: 20px;
+        outline: 1px solid #444;
+        top: 20px; left: 20px; */
+  top:1px;
+  padding: 0px;
+  margin: 0px;
+  left: 0px;
+
+}
+
+.box2 h1{
+  float: right;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  font-size: 20px;
+  background: #3498db;
+  border-radius: 40px;
+}
+.box2 span{
+  font-size: 25px;
+  height: 80px;
+  display: block;
+  line-height:  80px;
+  text-align: center;
+ 
+  color: antiquewhite
+
+}

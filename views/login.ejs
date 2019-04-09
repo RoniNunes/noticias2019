@@ -1,0 +1,46 @@
+<% include partials/header %>
+
+<div class="starter-template">
+    <h1>Entrar</h1>
+    <form class="form-signin" method="post">
+        <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Conectarme</h1>
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Usuario" >
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Recordar Contraseña
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        <a class="btn btn-lg btn-primary btn-block" href="/facebook">Entrar con facebook</a>
+        <a class="btn btn-lg btn-primary btn-block" href="/google">Entrar con Google</a>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+    </form>
+
+
+
+    <form class="form-signin" method="post">
+        <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">JWT</h1>
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input type="text" name="username" id="jwt-username" class="form-control" placeholder="Usuario" >
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="jwt-password" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Recordar Contraseña
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="button" id="jwt-login">Entrar</button>
+        
+
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+    </form>
+
+
+</div>
+
+<% include partials/footer %>

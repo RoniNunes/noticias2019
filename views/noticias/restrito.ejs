@@ -1,0 +1,19 @@
+<% include ../partials/header %></div>
+
+      <div class="starter-template">
+        <h1>Noticias Privada</h1>
+      <table>
+        <% ruteNoticiasPrivada.forEach( noticiasprivada => { %>
+
+     
+        <tr>
+          <td><%= noticiasprivada.title%></td>
+        </tr>
+
+        <% } )%>
+      </table>
+      </div>
+
+     
+
+<% include ../partials/footer %>
