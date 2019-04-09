@@ -13,7 +13,7 @@ module.exports = {
         const novoUsuario = new Usuario(req.body)
         const usuario= await novoUsuario.save()
         res.status(200).json(usuario)
-        email = req.body
+        const { email } = req.params
         console.log(usuario)
         console.log('START Parametros =>'+ email +'<= END Parametros')
     },
