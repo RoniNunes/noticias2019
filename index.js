@@ -36,9 +36,6 @@ const session = require('express-session')
 const bodyParser = require('body-parser')
 
 const mongo = 'mongodb+srv://first-crud:passwd2019@cluster0-cem25.mongodb.net/test?retryWrites=true'
-//const mongo = 'mongodb://localhost/fullstackmaster-noticias'
-//const mongo = 'mongodb://usernoticias:passnoticias@89.129.121.66:17027/fullstackmaster-noticias'
-//    mongodb://myUser:pass@x.x.x.x:puerto/myDatabase
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
@@ -63,8 +60,6 @@ app.use('/super', SuperAdmin)
 app.use('/catbusiness', ruteCategoriesBusiness)
 app.use('/categoriasmaster', ruteCategoriesMaster)
 app.use('/business', ruteBusiness)
-
-
 
 
 const createInitialUser = async () => {
@@ -110,147 +105,8 @@ const createInitialUser = async () => {
         content: 'content',
         category: 'private'
     })
-    //await noticiaPrivada.save()
-    let local = 'Tapas y Raciones'
-    let catPai = 'Comer y Beber'
-
-
-    const LasCategorias = new Categorybusiness({
-        title: local,//+new Date().getTime(),
-        content: 'Aqui un conteudo qualquer',
-        date: new Date(),
-        urlimage: '../img/categorias/' + local.replace(/ /g, "_") + '.jpg',
-        catMaster: catPai/*,
-         subcat: [{
-             type: Schema.Types.ObjectId,
-             ref: 'subcategorias'
-         }]*/
-
-
-    })
-
-    //await LasCategorias.save()
-    //console.log(LasCategorias)
-    //VOU CRIAR A CATEGORIA MASTER "Principal categoria"
-    const MasterCategories = new CategoryMaster({
-        title: 'Coches',
-        content: Date(),
-        category: 'Creada por Admin',
-        description: 'Subscribe'
-
-        //all categorias Master
-        /*origen:['Comer y Beber',
-     'Deportes', 'Compras', 
-     'Servicios Profesionales', 'Hogar',
-     'Trasnporte Publico', 'Servicio 24 Horas',
-     'Qué Visitar', 'Ideas y Consejos', 'Alojamiento', 
-     'Salud', 'Belleza', 'Formacion Escuelas', 
-     'Turismo Rural', 'Ocio', 'Motor', 'Niños', 'Coches']*/
-
-    })
-    //await MasterCategories.save()
-    //console.log('CREATED ' +MasterCategories)
-    //FIM DA PRINCIPAL CATEGORIA
-    const subcategoriaInsert = 'Restautantes'
-    const Proprietario = 'Admin'
-    const title = 'Vila Brasil'
-    const modelBusiness = new Business({
-        title: title,
-        content: "Descprition corta",
-        category: subcategoriaInsert,
-        Proprietario: Proprietario,
-        apellidos: 'Santos Nunes',
-        Direccion: 'calle maqueda 145',
-        telefono: '620047118',
-        paginaweb: 'www.fullstackbr.dev',
-        provincia: 'Madrid',
-        ciudad: 'Madrid',
-        barrio: 'Lucero',
-        codigoPostal: '28047',
-        email: 'fullstackbr@dev.com',
-        urlimage: '../img/' + title + '/.jpg',
-        config: [{
-            gps: [{
-                statusGps: 'Activo',
-                long: '14588454566',
-                lat: '8765895451'
-            }],
-            sendpush: [{
-                statusPush: 'On',
-                titlePush: 'Hola aqui é o titulo push en ' + title,
-                contentPush: 'Descripcion da empresa relacionada a ' + subcategoriaInsert
-            }],
-            chat: [{
-                statusChat: 'On'
-            }],
-        }],
-        servicios: [{
-            reservas: 'Reservas en desarrollo',
-            demanda: [{
-                title: 'Camareras',
-                content: 'Busco trabajo de camareras para trabajar fines de semana',
-                contact: 'Ronny',
-                tel: '620047118',
-                email: 'fullstackbr@gmail.com',
-                img: '../img/demanda/' + title + '/selecion-' + new Date().getTime(),
-                precio: '1200€'
-
-            }],
-            empleo: [{
-                title: 'Camareras',
-                content: 'Selecionamos camareras para trabajar fines de semana',
-                contact: 'Ronny',
-                tel: '620047118',
-                email: 'fullstackbr@gmail.com',
-                img: '../img/demanda/' + title + '/selecion-' + new Date().getTime(),
-                precio: '1200€'
-
-            }]
-        }]/*,
-        subcat: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Business'
-        }]*/
-    })
-    //await modelBusiness.save()
-
-
-    let BusinessNegocio = 'Donde llevar Los '//FALTA COMPRAS, OCIO , MOTOR TODOS TEM SUB-SUB-CATEGORIAS
-    const valor = 1
-    let LinkBusines = 'Ocio'
-    let BusinessTitle = 'Titulo ' + BusinessNegocio
-    let BusinessContent = 'Descripcion del ' + BusinessNegocio
-    const CatBusinessModel = new Categorybusiness({
-        negocio: BusinessNegocio,
-        link: LinkBusines,
-        title: BusinessTitle,
-        content: BusinessContent,
-        imgurl: '../img/business/' + BusinessNegocio.replace(/ /g, "_") + '.jpg',
-    })
-    console.log('     ')
-    if (valor === 1) {
-        console.log('------------------------------------------------------------------')
-        console.log('                                                                   ')
-        console.log('GRABANDO NUEVO TIPO DE NEGOCIO ' + BusinessNegocio)
-        console.log(' ')
-        console.log('RELACIONADO A ' + LinkBusines)
-        console.log('                                                                   ')
-        await CatBusinessModel.save()
-        console.log('------------------------------------------------------------------')
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+   
     const Rcreate = 12
     const CriarUsuarios = new UsuarioModel({
         firstName: "Roni",
@@ -263,56 +119,7 @@ const createInitialUser = async () => {
         await CriarUsuarios.save()
         console.log(CriarUsuarios)
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //await ModelBusiness.save()
-
-    let Negocio = 'Tapas y Raciones'
-
-    let Origen = 'Comer y Beber'
-    let Propietario = ''
-    const ModelCategoryBusiness = new Categorybusiness({
-        title: Negocio,
-        content: Origen,
-        catMaster: Origen,
-        categoryMaestra: [{
-            type: Schema.Types.ObjectId,
-            ref: 'catMaster'
-        }],
-        Propietario: Propietario,
-        urlimage: '../img/categorias/' + Negocio.replace(/ /g, "_") + '.jpg',
-        /*subcat: [{
-            type : Schema.Types.ObjectId,
-            ref: 'Business'
-        }]*/
-    })//final modelCategoryBusiness
-    //oo
-    //await ModelCategoryBusiness.save()
-    //console.log(ModelCategoryBusiness)
-
-
-
-
 }
-
-
-
 
 
 
