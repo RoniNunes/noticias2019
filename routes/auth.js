@@ -39,8 +39,8 @@ passport.use(new LocalStrategy(async(username, password, done)=>{
 
 passport.use(new FacebookStrategy({
     
-    clientID: '2088643204582331',
-    clientSecret: '5718e57ef86fb405ed0b99d49dbe5415',
+    clientID: 'xxxxxxxxxxx',
+    clientSecret: 'xxxxxxx',
     callbackURL: UrlfaceNgrok,
     profileFields: ['id', 'displayName', 'email','photos'],
     scope: ['user_friends']
@@ -64,8 +64,8 @@ passport.use(new FacebookStrategy({
 /**Google */
 
 passport.use(new GoogleStrategy({
-    clientID: '1033549178745-sc910itn3dt8hi66knn8tk1p086e75i2.apps.googleusercontent.com',
-    clientSecret: 'p5SA30Dy2shhEmODO6JNDSaI',
+    clientID: 'xxxxxxx,
+    clientSecret: 'pxxxxxx',
     callbackURL: UrlgoogleNgrok
 }, async(accessToken, refreshToken, err, profile, done)=>{
     const userDB = await User.findOne({googleId: profile.id})
@@ -175,23 +175,4 @@ router.post('/jwt', async(req, res)=>{
         res.json({ success: false})
     }
 })
-/*
- const user = await User.findOne({ username: req.body.username})
-    if (user){
-    const isValid = await user.checkPassword(req.body.password)
-
-    if(isValid){
-        req.session.user =user
-        req.session.role = user.roles[0]
-        res.redirect('/restrito/noticias')
-        console.log(user,isValid)
-    }else{
-        res.redirect('/login')
-       //* console.log(user)//
-    }    
-}else{
-    res.redirect('/login')
-    console.log('ERROR USUARIO NAO EXISTE NA BASE DE DADOS')
-}
- */
 module.exports = router
