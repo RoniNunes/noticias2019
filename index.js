@@ -110,7 +110,7 @@ const createInitialUser = async () => {
     const Rcreate = 12
     const CriarUsuarios = new UsuarioModel({
         firstName: "Roni",
-        lastName: "Nunes",
+        lastName: "yo",
         email: "ronny@etc.com"
     })
 
